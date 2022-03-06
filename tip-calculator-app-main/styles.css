@@ -1,0 +1,386 @@
+@import url("https://fonts.google.com/specimen/Space+Mono");
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --very-light-grayish-cyan: hsl(189, 41%, 97%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: "Space Mono", monospace;
+  background-color: var(--light-grayish-cyan);
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.content > .header {
+  margin-bottom: 2rem;
+  letter-spacing: 0.4rem;
+  color: var(--dark-grayish-cyan);
+}
+
+.main {
+  width: 35rem;
+  height: 20rem;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .leftSide {
+  width: 50%;
+  height: 100%;
+  padding: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1rem;
+}
+
+.main .leftSide .firstSection .header {
+  color: var(--grayish-cyan);
+  margin-bottom: 0.2rem;
+}
+
+.main .leftSide .firstSection .input {
+  width: 100%;
+  height: 1.75rem;
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: 5px;
+  position: relative;
+}
+
+.main .leftSide .firstSection .input input {
+  width: 100%;
+  height: 1.75rem;
+  background-color: inherit;
+  border: none;
+  border-radius: inherit;
+  padding: 0.3rem;
+  text-align: right;
+  color: var(--very-dark-cyan);
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.main .leftSide .firstSection .input input:focus-visible {
+  border: 3px solid var(--strong-cyan);
+  outline: none;
+}
+
+.main .leftSide .firstSection .input img {
+  position: absolute;
+  top: 30%;
+  left: 2%;
+}
+
+.main .leftSide .secondSection {
+  width: 100%;
+  height: 7rem;
+}
+
+.main .leftSide .secondSection .header {
+  color: var(--grayish-cyan);
+  margin-bottom: 0.2rem;
+}
+
+.main .leftSide .secondSection .container {
+  margin-top: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.main .leftSide .secondSection .container .button {
+  width: 4.5rem;
+  height: 2rem;
+  background-color: var(--very-dark-cyan);
+  border-radius: 10px;
+  position: relative;
+}
+
+.main .leftSide .secondSection .container .button div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+}
+
+.main .leftSide .secondSection .container .button:hover {
+  background-color: var(--strong-cyan);
+  cursor: pointer;
+}
+
+.main .leftSide .secondSection .container .button:hover div {
+  color: var(--very-dark-cyan);
+}
+
+.main .leftSide .secondSection .container .input {
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: 5px;
+  position: relative;
+}
+
+.main .leftSide .secondSection .container .input span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: var(--grayish-cyan);
+}
+
+.main .leftSide .secondSection .container .input input {
+  width: 4.5rem;
+  height: 2rem;
+  border: none;
+  border-radius: inherit;
+  padding: 0.3rem;
+  text-align: right;
+  color: var(--very-dark-cyan);
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.main .leftSide .secondSection .container .input input:focus-visible {
+  border: 3px solid var(--strong-cyan);
+  outline: none;
+}
+
+.main .leftSide .secondSection .container .input input:focus-visible ~ span, .main .leftSide .secondSection .container .input input:focus ~ span, .main .leftSide .secondSection .container .input input:hover ~ span {
+  visibility: hidden;
+}
+
+.main .leftSide .thirdSection {
+  margin-top: 0.5rem;
+}
+
+.main .leftSide .thirdSection .header {
+  color: var(--grayish-cyan);
+  margin-bottom: 0.2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .leftSide .thirdSection .header .error {
+  color: red;
+  font-size: 80%;
+  white-space: nowrap;
+}
+
+.main .leftSide .thirdSection .input {
+  width: 100%;
+  height: 1.75rem;
+  background-color: var(--very-light-grayish-cyan);
+  border-radius: 5px;
+  position: relative;
+}
+
+.main .leftSide .thirdSection .input input {
+  width: 100%;
+  height: 1.75rem;
+  background-color: inherit;
+  border: none;
+  border-radius: inherit;
+  padding: 0.3rem;
+  text-align: right;
+  color: var(--very-dark-cyan);
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.main .leftSide .thirdSection .input input:focus-visible {
+  border: 3px solid var(--strong-cyan);
+  outline: none;
+}
+
+.main .leftSide .thirdSection .input img {
+  position: absolute;
+  top: 30%;
+  left: 2%;
+}
+
+.main .rightSide {
+  margin: 1rem;
+  padding: 1.5rem;
+  width: 50%;
+  height: calc(100% - 2rem);
+  background-color: var(--very-dark-cyan);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 2.5rem;
+  position: relative;
+}
+
+.main .rightSide .firstSection, .main .rightSide .secondSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .rightSide .firstSection .sectionMain, .main .rightSide .secondSection .sectionMain {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .rightSide .firstSection .sectionMain .firstString, .main .rightSide .secondSection .sectionMain .firstString {
+  color: white;
+  font-size: 75%;
+}
+
+.main .rightSide .firstSection .sectionMain .secondString, .main .rightSide .secondSection .sectionMain .secondString {
+  color: var(--dark-grayish-cyan);
+  font-size: 50%;
+}
+
+.main .rightSide .firstSection .resultTipAmount, .main .rightSide .firstSection .resultTotal, .main .rightSide .secondSection .resultTipAmount, .main .rightSide .secondSection .resultTotal {
+  color: var(--strong-cyan);
+  font-size: 200%;
+}
+
+.main .rightSide button {
+  width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0.5rem;
+  font-weight: bold;
+  color: var(--very-dark-cyan);
+  background-color: var(--strong-cyan);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  top: 25%;
+}
+
+.main .rightSide button:active {
+  -webkit-transform: translateY(0.1rem);
+          transform: translateY(0.1rem);
+}
+
+@media only screen and (max-width: 375px) {
+  .content {
+    width: 100%;
+    height: 100%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .main .leftSide {
+    width: 100%;
+  }
+  .main .leftSide .firstSection
+.input {
+    width: 100%;
+  }
+  .main .leftSide .firstSection
+.input input {
+    width: 100%;
+  }
+  .main .rightSide {
+    width: calc(100% - 2rem);
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/*# sourceMappingURL=styles.css.map */
